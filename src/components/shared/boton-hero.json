@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_boton_heroes",
+  "info": {
+    "displayName": "botonHero"
+  },
+  "options": {},
+  "attributes": {
+    "texto": {
+      "type": "string",
+      "required": true
+    },
+    "enlace": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

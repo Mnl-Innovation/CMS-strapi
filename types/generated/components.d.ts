@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBotonHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_boton_heroes';
+  info: {
+    displayName: 'botonHero';
+  };
+  attributes: {
+    enlace: Schema.Attribute.String & Schema.Attribute.Required;
+    texto: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -62,14 +73,25 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTexto extends Struct.ComponentSchema {
+  collectionName: 'components_shared_textos';
+  info: {
+    displayName: 'texto';
+    icon: 'arrowRight';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.boton-hero': SharedBotonHero;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.texto': SharedTexto;
     }
   }
 }
