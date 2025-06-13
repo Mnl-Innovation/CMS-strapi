@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "singularName": "social-media",
+    "pluralName": "social-medias",
+    "displayName": "social-media"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plataforma": {
+      "type": "enumeration",
+      "enum": [
+        "linkedin",
+        "instagram",
+        "facebook"
+      ]
+    },
+    "contenido": {
+      "type": "text"
+    },
+    "enlace": {
+      "type": "text"
+    },
+    "fechaPublicacion": {
+      "type": "datetime"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "autor": {
+      "type": "string"
+    },
+    "activo": {
+      "type": "boolean",
+      "required": true
+    },
+    "orden": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
