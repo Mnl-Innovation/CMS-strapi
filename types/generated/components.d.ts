@@ -1,5 +1,14 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBoton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_botons';
+  info: {
+    displayName: 'boton';
+    icon: 'arrowRight';
+  };
+  attributes: {};
+}
+
 export interface SharedBotonHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_boton_heroes';
   info: {
@@ -85,6 +94,7 @@ export interface SharedTexto extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.boton': SharedBoton;
       'shared.boton-hero': SharedBotonHero;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

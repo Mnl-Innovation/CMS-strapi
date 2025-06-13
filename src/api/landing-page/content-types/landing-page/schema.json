@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "hero_sections",
+  "collectionName": "landing_pages",
   "info": {
-    "singularName": "hero-section",
-    "pluralName": "hero-sections",
-    "displayName": "hero-section"
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "landing-page"
   },
   "options": {
     "draftAndPublish": true
@@ -24,8 +24,8 @@
       },
       "required": true
     },
-    "subtitulo": {
-      "type": "text",
+    "slug": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,7 +33,16 @@
       },
       "required": true
     },
-    "imagen": {
+    "subtitulo": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
+    },
+    "image": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -47,14 +56,22 @@
         "files"
       ]
     },
-    "orden": {
-      "type": "integer",
+    "contenido": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "required": true
+    },
+    "formulario": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "activo": {
       "type": "boolean",
@@ -63,18 +80,25 @@
           "localized": true
         }
       },
-      "required": true,
-      "default": true
+      "required": true
     },
-    "botonHero": {
-      "type": "component",
+    "metaTitle": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.boton-hero",
-      "repeatable": false
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
